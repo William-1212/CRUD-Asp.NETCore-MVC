@@ -1,0 +1,21 @@
+@model IEnumerable<Agenda.Models.AgendaModel>
+
+<form  action="/Home/alterar/altval?id=" method="get">
+@foreach (var item in Model)
+{ 
+    <input type="hidden" name="id" value=@item.id >
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span  class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+  </div>
+  <input name="nome" value=@item.nome type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Sobrenome</span>
+  </div>
+  <input type="text" value=@item.sobrenome name="sobrenome" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+</div>
+}
+<button type="submit" class="btn btn-primary">Alterar</button>
+</form>

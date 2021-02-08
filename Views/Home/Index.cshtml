@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Agenda.Models.AgendaModel>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">@Html.DisplayNameFor(model=>model.id)</th>
+      <th scope="col">@Html.DisplayNameFor(model=>model.nome)</th>
+      <th scope="col">@Html.DisplayNameFor(model=>model.sobrenome)</th>
+    </tr>
+  </thead>
+  <tbody>
+@foreach (var item in Model)
+{ 
+
+      
+ 
+   
+
+    <tr>
+      <th scope="row">@Html.DisplayFor(modelItem => item.id)</th>
+      <td>@Html.DisplayFor(modelItem => item.nome)</td>
+      <td>@Html.DisplayFor(modelItem => item.sobrenome)</td>
+      <td>
+        
+          <a class="btn btn-primary text-white" asp-area="" asp-controller="Home" asp-action="inserir">inserir</a> 
+          | <a class="btn btn-primary text-white" href=Home/excluir?id=@item.id>excluir</a>
+          | <a class="btn btn-primary  text-white" href=Home/alterar?id=@item.id>alterar</a>
+      </td>
+    </tr>
+}
+  </tbody>
+</table>
