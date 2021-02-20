@@ -17,6 +17,12 @@ namespace Agenda.Models
     {
         [Key]
         public int id{get;set;}
+        
+        //PARA OUTROS BANCOS DE DADOS
+        //[Required]
+        //[StringLength(10,MinimumLength=6)]
+        //[RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage =
+        //   "Números e caracteres especiais não são permitidos no nome.")]
         public string nome {get;set;}
         public string sobrenome{get;set;}
     }
