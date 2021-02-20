@@ -8,6 +8,7 @@ namespace Agenda.Models
 {
     public partial class AgendaMYSQL : DbContext
     {
+    //<AgendaModel> E O AgendaModel.cs e Agendas e a tabela
         public DbSet<AgendaModel>Agendas{get;set;}
         public AgendaMYSQL()
         {
